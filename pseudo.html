@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Food Menu</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #fff8f0;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 { color: #e65c00; }
+
+    /* Sibling Selector - styles the paragraph right after h1 */
+    h1 + p {
+      background: #ffe0b2;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #bf360c;
+      display: inline-block;
+    }
+
+    ul { padding: 0; margin-top: 20px; }
+
+    /* Child Selector - styles only direct li children of ul */
+    ul > li {
+      list-style: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #5d4037;
+      padding: 10px 20px;
+      margin: 6px auto;
+      width: 260px;
+      background: #fff3e0;
+      border-radius: 8px;
+    }
+
+    /* nth-child - highlights the 3rd item as Chef's Special */
+    ul li:nth-child(3) {
+      font-weight: bold;
+      background: #c5ff82;
+      color: #02062d;
+      text-shadow: 2px 2px 2px rgb(4, 66, 72);
+      box-shadow: 7px 7px 7px rgb(255, 127, 229);
+      animation: myAnim 6s ease 0s 1 normal forwards;
+    }
+
+        
+
+     ul li:nth-child(3):hover{
+        background-color: #e6873b;
+        color: #5b0563;
+        box-shadow: 7px 7px 7px rgb(236, 255, 127);
+     }
+    
+
+     ul li:nth-child(1) {
+      background: #8a82ff;
+      color: #c0e600;
+      text-shadow: 2px 2px 2px rgb(9, 4, 72);
+      box-shadow: 7px 7px 7px rgb(127, 255, 212);
+      animation: myAnim 6s ease 0s 1 normal forwards;
+    }
+    @keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+    ul li:nth-child(1):hover{
+        background-color: #022904;
+        color: #75eb26;
+        box-shadow: 7px 7px 7px aquamarine;
+    }
+     ul li:nth-child(2) {
+      background: #8a82ff;
+      color: #c0e600;
+      text-shadow: 2px 2px 2px rgb(9, 4, 72);
+      box-shadow: 7px 7px 7px aquamarine;
+      animation: myAnim 6s ease 0s 1 normal forwards;
+    }
+    ul li:nth-child(2):hover{
+        background-color: #022904;
+        color: #75eb26;
+        box-shadow: 7px 7px 7px aquamarine;
+    }
+    ul li:nth-child(4) {
+      background: #8a82ff;
+      color: #c0e600;
+      text-shadow: 2px 2px 2px rgb(9, 4, 72);
+      box-shadow: 7px 7px 7px aquamarine;
+      animation: myAnim 6s ease 0s 1 normal forwards;
+    }
+    ul li:nth-child(4):hover{
+        background-color: #022904;
+        color: #75eb26;
+        box-shadow: 7px 7px 7px aquamarine;
+    }
+     ul li:nth-child(5) {
+      background: #8a82ff;
+      color: #c0e600;
+      text-shadow: 2px 2px 2px rgb(3, 1, 32);
+      box-shadow: 7px 7px 7px aquamarine;
+      animation: myAnim 6s ease 0s 1 normal forwards;
+    }
+    ul li:nth-child(5):hover{
+        background-color: #022904;
+        color: #75eb26;
+        box-shadow: 7px 7px 7px aquamarine;
+    }
+    
+
+    .desc {
+      color: #555;
+      margin-top: 20px;
+      font-size: 15px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* first-letter - makes the first letter big and bold */
+    .desc::first-letter {
+      font-size: 220%;
+      color: #e65c00;
+      font-weight: bold;
+    }
+
+    .links { margin-top: 25px; }
+
+    /* Hover Effect - links glow when mouse moves over them */
+    a {
+      color: #e65c00;
+      text-decoration: none;
+      font-size: 15px;
+      margin: 0 12px;
+      padding: 8px 18px;
+      border: 2px solid #e65c00;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      background: #e65c00;
+      color: white;
+    }
+    .img{
+        background-color: chartreuse;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>My Food Menu</h1>
+  <p>Pick your favourite dish and dig in!</p>
+
+  <ul>
+    <li>Pizza</li>
+    <li>Burger</li>
+    <li>Tacos — Chef's Special!</li>
+    <li>Noodles</li>
+    <li>Ice Cream</li>
+  </ul>
+
+  <p class="desc">Every dish on this menu is made with love and
+  loads of flavour. Try them all and find your favourite!</p>
+
+  <div class="links">
+    <a href="#">Order Now</a>
+    <a href="image.html">See More</a>
+
+  </div>
+</body>
+</html>
